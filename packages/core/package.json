@@ -1,0 +1,26 @@
+{
+  "name": "@pms/core",
+  "version": "0.0.0",
+  "description": "just a demo module.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts-resolve",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@pms/utils": "workspace:^0.0.0"
+  }
+}
