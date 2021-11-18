@@ -1,10 +1,9 @@
 // Copy from vite.
 // Invoked on the commit-msg git hook by yorkie.
-console.log('-------------', 99)
 const chalk = require('chalk')
 const msgPath = process.env.GIT_PARAMS
 const msg = require('fs').readFileSync(msgPath, 'utf-8').trim()
-console.log('-------------', msgPath)
+
 const commitRE =
   /^(revert: )?(feat|fix|docs|dx|refactor|perf|test|workflow|build|ci|chore|types|wip|release|deps)(\(.+\))?: .{1,50}/
 
