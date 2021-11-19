@@ -13,7 +13,6 @@
     "lint:fix": "pnpm run lint -- --fix",
     "test": "jest",
     "husky:lint": "lint-staged --concurrent false",
-    "husky:commit-msg": "",
     "prepare": "husky install"
   },
   "repository": {
