@@ -13,6 +13,7 @@
     "lint:fix": "pnpm run lint -- --fix",
     "test": "jest",
     "husky:lint": "lint-staged --concurrent false",
+    "husky:commit-msg": "",
     "prepare": "husky install"
   },
   "repository": {
@@ -25,10 +26,6 @@
     "starter",
     "workspace"
   ],
-  "gitHooks": {
-    "pre-commit": "lint-staged --concurrent false",
-    "commit-msg": "node scripts/verifyCommit.js"
-  },
   "lint-staged": {
     "*": [
       "prettier --write --ignore-unknown"
@@ -50,6 +47,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.10.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@egoist/prettier-config": "^0.1.0",
     "@sucrase/jest-plugin": "^2.2.0",
     "@testing-library/jest-dom": "^5.15.0",
