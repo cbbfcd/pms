@@ -12,6 +12,7 @@
     "lint": "eslint './packages/**/*.{js,ts,tsx,vue,svelte,json}'",
     "lint:fix": "pnpm run lint -- --fix",
     "test": "jest",
+    "husky:lint": "lint-staged --concurrent false",
     "prepare": "husky install"
   },
   "repository": {
